@@ -11,6 +11,7 @@ func NewStorage(db *sql.DB) *Storage {
 }
 
 func (s *Storage) InitDB() error {
+	// 4.1 create tables
 	query := `
     CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,
